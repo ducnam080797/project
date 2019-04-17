@@ -1,0 +1,25 @@
+vi:
+  controllers:
+    users_controller:
+      success_create: Chào mừng bạn đến với mạng xã hội
+      fails_create: Tạo tài khoản thất bại . Bạn phải tạo lại tài khoản
+    sessions_controller:
+      invalid_email: email hoặc mật khẩu không hợp lệ
+  layouts:
+    header:
+      social_network: Mạng xã hội
+      home: Trang chủ
+      account: Tài khoản
+      profile: Thông tin người dùng
+      settings: Cài đặt tài khoản
+      log_out: Đăng xuất
+      log_in: Đăng nhập
+    footer:
+      contact: Liên hệ
+    application:
+      title: Trang chủ
+  sessions:
+    new:
+      sign_in: Đăng nhập
+      sign_up: Đăng ký
+
