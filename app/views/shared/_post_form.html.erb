@@ -1,0 +1,14 @@
+<div class="form_post">
+  <h4><%= t".create_post" %></h4>
+  <%= form_for @posts do |f|%>
+    <div class="field">
+      <%= f.text_area :content, placeholder: t(".content") %>
+    </div>
+    <div class="field">
+      <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', autocomplete: "img" %>
+    </div>
+    <div class="button_post">
+      <%= f.submit"Post", class:"btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

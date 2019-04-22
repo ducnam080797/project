@@ -1,3 +1,15 @@
 
-<%#  <%= link_to "English", locale:"en" %> 
-<%# <%= link_to "Vietnamese", locale:"vi" %> 
+<% if user_signed_in? %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-md-offset-2">
+        <section class="post_form">
+          <%= render "shared/post_form" %>
+        </section>
+          <%= render "shared/feed" %>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <%= render "devise/registrations/new"%>
+<% end %>
