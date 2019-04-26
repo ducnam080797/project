@@ -18,6 +18,19 @@ vi:
       contact: Liên hệ
     application:
       title: Trang chủ
+  posts:
+    post:
+      posted: Được đăng lên
+      ago: trước
+    show:
+      posts: Những bài viết
+  shared:
+    post_form:
+      create_post: Tạo bài viết
+      content: Bạn cảm thấy sao ?
+  users:
+    show:
+      my_wall: Tường của tôi
   sessions:
     new:
       sign_in: Đăng nhập

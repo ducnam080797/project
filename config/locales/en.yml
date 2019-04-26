@@ -9,7 +9,6 @@ en:
     header:
       social_network: Social network    
       home: Home
-      users: User
       account: Account
       profile: Profile
       settings: Setting
@@ -19,6 +18,19 @@ en:
       contact: Contact
     application:
       title: Home
+  posts:
+    post:
+      posted: posted
+      ago: ago
+    show:
+      posts: Posts
+  shared:
+    post_form:
+      create_post: Create Post
+      content: What did you feel ?
+  users:
+    show:
+      my_wall: My wall
   sessions:
     new:
       sign_in: Sign in
