@@ -1,0 +1,15 @@
+<li>
+  <div class="row" id="person_information">
+    <div class="col-md-2">
+      <span class="person_img"><%= image_tag user.picture.url, size:100, class:"avatar_suggest" %></span>
+    </div>
+    <div class="detail_person col-md-10"> 
+      <span class="person_name"><%= link_to user.name, user %></span>
+      <span class="person_email"><%= user.email %></span>
+      <span class="person_birth"><%= user.birthday %></span>
+      <% unless current_user == user %>
+        <button class="btnadd_friend btn btn-primary"><%= link_to t(".add_friend"),friendships_path %></button>
+      <% end %>
+    </div>
+  </div>
+</li>

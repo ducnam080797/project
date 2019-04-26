@@ -1,20 +1,21 @@
 class PostsController < ApplicationController
-  before_action :user_signed_in?, only: %i(:create, :destroy, :show, :index)
+  before_action :user_signed_in?, only: %i(create destroy show index)
 
   def index
     @posts = Post.all
+    @users = User.all
   end
 
-  def show;end
+  def show; end
 
   def create
     @post = current_user.posts.build(post_params)
-      if @post.save
-        flash[:success] = " your post is posted"
-        redirect_to root_path
-      else
-        flash[:danger] = " your post isn't pots"
-      end
+    if @post.save
+      flash[:success] = " your post is posted"
+      redirect_to root_path
+    else
+      flash[:danger] = " your post isn't pots"
+    end
   end
 
   def destroy

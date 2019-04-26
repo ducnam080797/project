@@ -1,0 +1,16 @@
+<li>
+  <% if friendship.status == "request" %>
+  <div class="row" id="person_information">
+    <div class="col-md-3">
+      <span class="person_img"><%= image_tag friendship.sender_picture, size:100, class:"avatar_suggest" %></span>
+    </div>
+    <div class="name_add_friend col-md-6"> 
+      <span class="person_name"><%= link_to friendship.sender_name, user_path(friendship.sender_id) %></span>
+    </div>
+    <div class="btn_add_friend col-md-3">
+      <%= render "friendships/accept_add_friend", friendship: friendship %>
+      <button class="btn_dd_friend_ref btn btn-primary"><%= link_to "refuse", friendship, method: :delete %></button>
+    </div>
+  </div>
+  <% end %>
+</li>

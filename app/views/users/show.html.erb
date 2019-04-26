@@ -1,6 +1,19 @@
 <div class="row">
-  <div class="col-md-7 col-md-offset-2">
-      <h3><%= t".my_wall" %></h3>
-      <%= render @posts %>
+  <div class="personal_infor col-md-5">
+    <h3 class="personal_information"> Thông tin cá nhân </h3>
+    <div class="basic_infor">
+      <span class="person_basic"><%= image_tag @user.picture.url, size:262, class:"avatar_suggest" %></span>
+      <span class="person_basic"><b><%= t".name" %></b> <%= @user.name %></span>
+      <span class="person_basic"><b><%= t".sex" %></b> <%= @user.sex %></span>
+      <span class="person_basic"><b><%= t".birthday"%></b> <%= @user.birthday.strftime("%d/%m/%Y") %></span>
+      <span class="person_basic"><b><%= t".email"%></b> <%= @user.email %></span>
+      <% if current_user != @user %>
+        <%= render "friendships/invitation_friend" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="personal_wall col-md-7">
+    <h3><%= t".my_wall" %></h3>
+    <%= render @posts %>
   </div>
 </div>

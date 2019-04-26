@@ -1,10 +1,12 @@
 class CreateFriendships < ActiveRecord::Migration[5.2]
   def change
     create_table :friendships do |t|
-      t.references :user, foreign_key: true
-      t.integer :add_friend
-      t.integer :watting
-      t.integer :friend
+      t.integer :status
+      t.integer :sender_id
+      t.integer :receiver_id
+      t.string :sender_name
+      t.string :receiver_name
+      t.string :sender_picture
 
       t.timestamps
     end

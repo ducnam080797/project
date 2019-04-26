@@ -12,6 +12,7 @@ en:
       account: Account
       profile: Profile
       settings: Setting
+      friend: Suggest friends
       log_out: Log out
       log_in: Log in
     footer:
@@ -31,6 +32,12 @@ en:
   users:
     show:
       my_wall: My wall
+      name: "Name:"
+      sex: "Sex:"
+      birthday: "Birthday:"
+      email: "Email:"
+    user:
+      add_friend: + Add friend
   sessions:
     new:
       sign_in: Sign in

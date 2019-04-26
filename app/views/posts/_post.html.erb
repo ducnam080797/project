@@ -1,18 +1,40 @@
 <li id="posts">
-  <span class="post">
-    <%= link_to post.user.name, user_path(post.user_id) %>
-  </span>
-  <span class="time_post"> 
-    <%= t".posted" %> <%= time_ago_in_words(post.created_at) %> <%= t".ago" %>
-  </span>
-  <span class="content">
-    <%= post.content %>
-    <%= image_tag post.picture.url if post.picture? %>
-  </span>
-  <span class="timestamp">
-    <% if current_user == post.user %>
-      <%= link_to "delete", post, method: :delete,
-                                       data: { confirm: "You sure?" } %>
-    <% end %>
-  </span>
+  <div class="row">
+    <div class="form_post">
+      <div class="row">
+        <div class="form_avatar col-md-1">
+          <span class="avatar_person_post">
+            <%= image_tag post.user.picture.url, size:50, class:"avatar" %>
+          </span>
+        </div>
+        <div class="form_person col-md-10">
+          <span class="post">
+            <%= link_to post.user.name, user_path(post.user_id) %>
+          </span>
+          <span class="time_post">
+            <%= t".posted" %> <%= time_ago_in_words(post.created_at) %> <%= t".ago" %>
+          </span>
+        </div>
+        <div class="col-md-1">
+          <span class="timestamp">
+            <% if current_user == post.user %>
+              <%= link_to "delete", post, method: :delete,class:"delete_post" %>
+            <% end %>
+          </span>
+        </div>
+      </div>
+      <span class="content">
+        <%= post.content %>
+        <%= image_tag post.picture.url if post.picture? %>
+      </span>
+      <div class="row">
+        <div class="like_post col-md-6">
+          <%= link_to(image_tag("heart-regular.svg"),"#") %>
+        </div>
+        <div class="cmt_post col-md-6">
+          <%= link_to(image_tag("comment-regular.svg"),"#") %>
+        </div>
+      </div>
+    </div>
+  </div>
 </li>

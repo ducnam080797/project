@@ -5,8 +5,8 @@ class User < ApplicationRecord
     :recoverable, :rememberable, :validatable
   has_many :posts, dependent: :destroy
   mount_uploader :picture, PictureUploader
-  has_many :comment, dependent: :destroy
-  has_many :friendship
+  has_many :friendships, foreign_key: :sender_id,   class_name: "Friendship"
+  has_many :friendships, foreign_key: :receiver_id, class_name: "Friendship"
   before_save{self.email = email.downcase}
   validates :name, presence: true, length: {maximum: Settings.maximum_name}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

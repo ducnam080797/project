@@ -6,8 +6,9 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
-            <li><%= link_to current_user.name,"#" %></li>  
-            <li><%= link_to t(".home"), root_path %></li>
+            <li><%= link_to current_user.name, "#" %></li>
+            <li><%= link_to t(".friend"), users_path %></li> 
+            <li><%= link_to ("Lời kết bạn"), friendships_path %></li>
             <li><%= link_to t(".account"), user_path(current_user) %></li>
             <li><%= link_to t(".log_out"), destroy_user_session_path, method: :delete %></li>
             <li><%= link_to "English", locale: "en" %></li>
