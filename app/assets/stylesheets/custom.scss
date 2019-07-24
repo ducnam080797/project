@@ -20,6 +20,14 @@ $color-red : red;
   #button_post {
     padding-bottom: 15px;
   }
+  .like_post{
+    width: 60px;
+    height: 30px;
+  }
+  .cmt_post{
+    width: 60px;
+    height: 30px;
+  }
 }
 
 #posts {
@@ -37,9 +45,26 @@ $color-red : red;
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
   }
-  .time_post {
+  .avatar_person_post{
+    .avatar{
+      border: 0px solid ;
+      border-radius: 50%;
+    }
+  }
+  .form_post{
+    padding: 10px;
+  }
+  .form_person{
+    padding-left: 25px;
+  }
+  .post{
+    font-weight: bold;
+    font-size: 120%;
+  }
+  .time_post{
     margin: 2px 0 2px 0;
     display: block;
+    color: gray;
   }
   .user {
     margin-top: 5em;
@@ -48,16 +73,27 @@ $color-red : red;
   .content {
     display: block;
     margin: 10px 0 10px 0;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.38;
     img {
       display: block;
       padding: 10px 0 10px 0;
       height: 300px;
-      width: 650px;
+      width: 632px;
     }
   }
   .timestamp {
     color: $gray-light;
     display: block;
+    .delete_post{
+      position: relative;
+    }
+  }
+  .avatar_person_post{
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -101,15 +137,6 @@ aside {
   }
 }
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
-.gravatar_edit {
-  margin-top: 15px;
-}
-
 .list_posts {
   padding-left: 0px;
 }
@@ -145,4 +172,80 @@ input {
 
 footer{
   background: black;
+}
+
+/* infomation user */
+#inf_user{
+  list-style-type: none;
+  .detail_person{
+    padding-left: 25px;
+    .btnadd_friend{
+      a{
+        color: #9fc2e0 !important;
+      }
+    }
+  }
+  .person_name{
+    display: block;
+    margin-bottom: 5px;
+  }
+  .person_email{
+    display: block;
+    margin-bottom: 5px;
+  }
+  .person_birth{
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+#person_information{
+  margin: 20px 0 15px 0;
+  border-bottom: 1px solid #c5b7b7;
+  padding-bottom: 10px;
+  .avatar_suggest{
+    border: 0px solid ;
+    border-radius: 50%;
+  }
+}
+
+.personal_infor{
+  .basic_infor{
+    display: grid;
+    margin-top: 25px;
+    .person_basic{
+      margin: 5px 0 5px 0;
+      .avatar_suggest{
+        border: 0px solid;
+        border-radius: 50%;
+        margin-left: 100px;
+      }
+    }
+    .btnadd_friend{
+      a{
+        color: #9fc2e0 !important;
+      }
+    }
+  }
+  .personal_information{
+    text-align: center;
+  }
+}
+
+.personal_wall{
+  margin-left: 0px;
+}
+
+.name_add_friend{
+  padding-top: 30px;
+  .person_name{
+    font-size: 200%;
+  }
+}
+
+.btn_add_friend{
+  .btn_add_friend_acc{
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
 }

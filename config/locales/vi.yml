@@ -12,6 +12,7 @@ vi:
       account: Tài khoản
       profile: Thông tin người dùng
       settings: Cài đặt tài khoản
+      friend: Gợi ý bạn bè
       log_out: Đăng xuất
       log_in: Đăng nhập
     footer:
@@ -20,7 +21,7 @@ vi:
       title: Trang chủ
   posts:
     post:
-      posted: Được đăng lên
+      posted: Đăng lên
       ago: trước
     show:
       posts: Những bài viết
@@ -31,6 +32,12 @@ vi:
   users:
     show:
       my_wall: Tường của tôi
+      name: "Tên: "
+      sex: "Giới tính: "
+      birthday: "Ngày sinh:"
+      email: "Email:     "
+    user:
+      add_friend: + Thêm bạn
   sessions:
     new:
       sign_in: Đăng nhập

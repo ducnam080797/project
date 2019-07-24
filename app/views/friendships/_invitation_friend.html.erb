@@ -1,0 +1,15 @@
+<% if @user.friendships.accept_friend("accept").any? %>
+  <button class="btn_dd_friend_ref btn btn-danger"><%= link_to "huy ket ban", friendship_url, method: :delete %></button>
+<% end %>
+<% if @user.friendships.request_friend("request").any? %>
+   <button class="btn_dd_friend_ref btn btn-success"><%= link_to "da gui loi moi ket ban","#" %></button>
+<% else %>
+  <%= form_with url: friendships_path do |f| %>
+    <%= hidden_field_tag :sender_id, current_user.id %>
+    <%= hidden_field_tag :sender_name, current_user.name %>
+    <%= hidden_field_tag :receiver_id, @user.id %>
+    <%= hidden_field_tag :receiver_name, @user.name %>
+    <%= hidden_field_tag :sender_picture, current_user.picture %>
+    <%= f.submit "add friend", class: "btn btn-primary" %>
+  <% end %>
+<% end %>
